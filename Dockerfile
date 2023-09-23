@@ -12,7 +12,7 @@ RUN npm install
 COPY . /app/
 EXPOSE 80
 ## Healthcheck command
-HEALTHCHECK --interval=12s --timeout=12s --start-period=30s \  
+HEALTHCHECK --interval=12s --timeout=12s \  
     CMD node healthcheck.js
 ## executing web application
 CMD ["node", "/app/server.js" ]
